@@ -1,5 +1,7 @@
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from './rootReducer';
+import pokeReducer from './pokeReducer';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+export const store = createStore(pokeReducer, applyMiddleware(thunk)); 
+
+export default store;
