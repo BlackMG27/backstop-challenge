@@ -1,9 +1,9 @@
 import React, {Component, Fragment} from 'react';
-import {connect} from 'react-redux';
+
 
 class PokemonCard extends Component{
     render(){
-        const {height, weight, name, base_experience, sprites} = this.props;
+        const {height, weight, name, base_experience, sprites} = this.props.pokemon;
         return(
             <Fragment>
                 <figure className="poke-card">
@@ -19,3 +19,5 @@ class PokemonCard extends Component{
         )
     }
 }
+
+export default PokemonCard;

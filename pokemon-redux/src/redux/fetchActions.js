@@ -1,7 +1,7 @@
 import {fetchPokeRequest,fetchPokeSuccess, fetchPokeError} from './fetchTypes'
 
 
-function fetchPokemonRedux(){
+export const fetchPokemonRedux = () =>{
     return(dispatch) => {
         dispatch(fetchPokeRequest());
         return fetchPokemon().then(([response, json]) => {
@@ -26,4 +26,3 @@ pokeArr.forEach(poke => {
     fetchPokemon(poke);
 })
 
-export default fetchPokemonRedux;
