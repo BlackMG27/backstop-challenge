@@ -1,6 +1,6 @@
 import {fetchPokeRequest,fetchPokeSuccess} from './fetchTypes'
 
-const pokeReducer = (state = {}, action) => {
+export const pokeReducer = (state = {}, action) => {
     switch(action.type){
         case fetchPokeRequest.FETCH_REQUEST:
             return state;
@@ -11,4 +11,3 @@ const pokeReducer = (state = {}, action) => {
     }
 }
 
-export default pokeReducer;

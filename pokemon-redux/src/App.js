@@ -6,14 +6,16 @@ import './App.css';
 
 class App extends Component {
   componentDidMount(){
-    this.props.dispatch(fetchPokemonRedux());
+    this.props.fetchPokemonRedux();
   }
 
   componentDidUpdate(){
-    this.props.dispatch(fetchPokemonRedux());
+    this.props.fetchPokemonRedux();
   }
 
+  
   render(){
+    
     return (
       <Fragment>
         <header>
@@ -25,7 +27,7 @@ class App extends Component {
             <h1 className="title">Pokemon Redux</h1>
         </header>
         <section className="pokemon-cards">
-          {
+          { 
               this.props.pokemon.map( (poke, index) => (
                 <PokemonCard key={index} pokemon={poke}/>
               ))
